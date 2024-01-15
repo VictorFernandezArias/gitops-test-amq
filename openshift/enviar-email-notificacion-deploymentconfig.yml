@@ -63,8 +63,8 @@ spec:
               protocol: TCP
           env:
             - name: AMQ_HOST
-              #value: amq-instance-hdls-svc.broker-credito-web.svc.cluster.local
-              value: amq-instance-hdls-svc.rhamq-dev.svc.cluster.local
+              value: amq-instance-hdls-svc.broker-credito-web.svc.cluster.local
+              # value: amq-instance-hdls-svc.rhamq-dev.svc.cluster.local
             - name: AMQ_PORT
               value: '61616'
           resources: {}

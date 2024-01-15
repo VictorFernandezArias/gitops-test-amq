@@ -1,0 +1,18 @@
+oc apply -f activar-personas-buildconfig.yml
+oc apply -f activar-personas-deploymentconfig.yml
+oc apply -f activar-personas-imagestream.yml
+oc apply -f activar-personas-route.yml
+oc apply -f activar-personas-service.yml
+
+oc apply -f crear-personas-buildconfig.yml
+oc apply -f crear-personas-deploymentconfig.yml
+oc apply -f crear-personas-imagestream.yml
+oc apply -f crear-personas-route.yml
+oc apply -f crear-personas-service.yml
+
+
+oc apply -f enviar-email-notificacion-buildconfig.yml
+oc apply -f enviar-email-notificacion-deploymentconfig.yml
+oc apply -f enviar-email-notificacion-imagestream.yml
+oc apply -f enviar-email-notificacion-route.yml
+oc apply -f enviar-email-notificacion-service.yml
