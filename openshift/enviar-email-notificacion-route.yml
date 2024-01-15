@@ -1,0 +1,23 @@
+﻿kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: enviar-email-notificacion
+  labels:
+    app: enviar-email-notificacion
+    app.kubernetes.io/component: enviar-email-notificacion
+    app.kubernetes.io/instance: enviar-email-notificacion
+    app.kubernetes.io/name: enviar-email-notificacion
+    app.kubernetes.io/part-of: enviar-email-notificacion
+    app.openshift.io/runtime: java
+    app.openshift.io/runtime-version: openjdk-11-el7
+  annotations:
+    openshift.io/host.generated: 'true'
+spec:
+  to:
+    kind: Service
+    name: enviar-email-notificacion
+    weight: 100
+  port:
+    targetPort: 8080-tcp
+  wildcardPolicy: None
+status: {}

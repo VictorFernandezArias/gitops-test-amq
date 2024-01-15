@@ -1,0 +1,23 @@
+﻿kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: activar-personas
+  labels:
+    app: activar-personas
+    app.kubernetes.io/component: activar-personas
+    app.kubernetes.io/instance: activar-personas
+    app.kubernetes.io/name: activar-personas
+    app.kubernetes.io/part-of: activar-personas
+    app.openshift.io/runtime: java
+    app.openshift.io/runtime-version: openjdk-11-el7
+  annotations:
+    openshift.io/host.generated: 'true'
+spec:
+  to:
+    kind: Service
+    name: activar-personas
+    weight: 100
+  port:
+    targetPort: 8080-tcp
+  wildcardPolicy: None
+status: {}
